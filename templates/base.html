@@ -1,0 +1,17 @@
+{% load cms_tags sekizai_tags %}
+{% load staticfiles %}
+<html>
+  <head>
+      {% render_block "css" %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen" />
+  </head>
+  <body>
+      {% cms_toolbar %}
+
+      {% block base_content %}
+          {% placeholder base_content %}
+      {% endblock %}
+
+      {% render_block "js" %}
+  </body>
+</html>
