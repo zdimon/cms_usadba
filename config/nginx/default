@@ -1,0 +1,10 @@
+server {
+    listen      80;
+    server_name usadbacms.local;
+    access_log  /var/log/nginx/usadbacms.log;
+    location / {
+           uwsgi_pass      unix:///tmp/usadbacms.sock;
+            include         uwsgi_params;
+    }
+}
+# sudo ln -s /etc/uwsgi/apps-available/pressa.ini /etc/uwsgi/apps-enabled/
