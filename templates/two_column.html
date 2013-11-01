@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block base_content %}
+    <table>
+    <tr>
+        <td width="80%">
+            {% placeholder left %}
+        </td>
+        <td>
+            {% placeholder right %}
+        </td>
+    </tr>
+    </table>
+
+{% endblock %}

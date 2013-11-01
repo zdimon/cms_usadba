@@ -1,7 +1,7 @@
 [uwsgi]
 thread=3
 master          = true
-processes       = 2
+processes       = 10
 module = cms_usadba.wsgi
 chdir = /home/zarik/web/django_projects/cms_ve/cms_usadba
 socket          = /tmp/usadbacms.sock

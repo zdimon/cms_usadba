@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Django settings for cms_usadba project.
 
 import os
@@ -129,12 +130,13 @@ TEMPLATE_DIRS = (
 )
 
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
+    ('one_column.html', u'Одна колонка'),
+    ('two_column.html', u'Две колонки'),
+    ('homepage.html', u'Домашняя страница'),
 )
 
 LANGUAGES = [
-    ('en', 'English'),
+    ('ru', 'Russian'),
 ]
 
 
@@ -162,9 +164,15 @@ INSTALLED_APPS = (
     'cms.plugins.twitter',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'cmsplugin_contact',
+    'shop',
+    'myshop',
+    'shop_simplecategories',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+DEFAULT_FROM_EMAIL = 'test@test.com'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
