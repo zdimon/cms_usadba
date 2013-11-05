@@ -36,12 +36,13 @@
 
 			<div id="menu-content">
 				<div id="menu-shadow"></div>
-				<ul id="secondary-menu" class="nav clearfix"><li id="menu-item-307" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-307"><a href="">О нашей семье</a></li>
+				<ul id="secondary-menu" class="nav clearfix">
+                    <li ><a href="{% url 'news_list' %}">О нашей семье</a></li>
                 <li>
                     <a href="">Каталог продуктов</a>
                 </li>
                  <li>
-                    <a href="">Доставка и оплата</a>
+                    <a href="{% page_url 'quality' %}">Доставка и оплата</a>
                 </li>
                 <li>
                     <a href="">Рецепты</a>

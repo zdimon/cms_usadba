@@ -13,6 +13,19 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+
+CMS_APPLICATIONS_URLS = (
+    ('cmsplugin_news.urls', 'News'),
+)
+CMS_NAVIGATION_EXTENDERS = (
+    ('cmsplugin_news.navigation.get_nodes','News navigation'),
+)
+
+
+
+CMS_SEO_FIELDS = True
+CMS_UNIHANDECODE_DECODERS = ['ru']
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -39,7 +52,7 @@ TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 SITE_ID = 1
 
@@ -168,9 +181,23 @@ INSTALLED_APPS = (
     'shop',
     'myshop',
     'shop_simplecategories',
+    'recipes',
+    'news',
+    'tinymce',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
+
+
+
 
 DEFAULT_FROM_EMAIL = 'test@test.com'
 

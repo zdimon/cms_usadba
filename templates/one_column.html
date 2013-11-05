@@ -2,5 +2,34 @@
 {% load cms_tags %}
 
 {% block base_content %}
-  {% placeholder content %}
+
+   	<div id="top-area">
+		<div id="top-area-bg">
+			<div id="bottom-area-bg">
+				<div class="container">
+					<div id="category-inner">
+                           <h1 class="category-title">
+                              {% page_attribute title %}
+                           </h1>
+
+                        <p class="description">
+                            {% placeholder description %}
+                        </p>
+                </div> <!-- end #featured -->				</div> <!-- end .container -->
+			</div> <!-- end #bottom-area-bg -->
+		</div> <!-- end #top-area-bg -->
+	</div> <!-- end #top-area -->
+
+
+    <div id="main-content-area" class="container">
+       <div id="breadcrumbs">
+
+
+
+                {% placeholder content %}
+
+
+
+           </div>
+    </div>
 {% endblock %}
